@@ -2,6 +2,9 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+for k, v in os.environ.items():
+    print(f'{k}: {v}')
+
 # -*- coding: utf-8 -*-
 """Default scrapyrt settings."""
 
@@ -9,14 +12,14 @@ load_dotenv()
 PROJECT_SETTINGS = None
 
 # Path to server log file
-LOG_FILE = os.getenv("SCRAPYRT_SERVER_LOG_FILE")
+LOG_FILE = os.environ.get("SCRAPYRT_SERVER_LOG_FILE")
 
 # Spider logs will be kept in file with name set to timestamp in following
 # format
 SPIDER_LOG_FILE_TIMEFORMAT = '%Y-%m-%dT%H%M%S.%f'
 
 # Path to spiders log directory
-LOG_DIR = os.getenv("SCRAPYRT_SERVER_LOG_DIR")
+LOG_DIR = os.environ.get("SCRAPYRT_SERVER_LOG_DIR")
 
 LOG_ENCODING = 'utf-8'
 
