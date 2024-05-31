@@ -19,6 +19,7 @@ from .decorators import deprecated
 from .log import setup_spider_logging
 
 from dotenv import load_dotenv
+# because this code is run as a dependency to Pacer-Scraper, we need to load the .env from the main project level
 load_dotenv("/scrapyrt/src/.env")
 
 
