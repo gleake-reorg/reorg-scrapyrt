@@ -18,6 +18,9 @@ from .conf.spider_settings import get_scrapyrt_settings, get_project_settings
 from .decorators import deprecated
 from .log import setup_spider_logging
 
+from dotenv import load_dotenv
+load_dotenv()
+
 
 class ScrapyrtCrawler(Crawler):
     """Main and only difference from base class -
