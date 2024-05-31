@@ -1,3 +1,5 @@
+import os
+
 # -*- coding: utf-8 -*-
 """Default scrapyrt settings."""
 
@@ -5,14 +7,14 @@
 PROJECT_SETTINGS = None
 
 # Path to server log file
-LOG_FILE = 'app.log'
+LOG_FILE = os.getenv("SCRAPYRT_SERVER_LOG_FILE")
 
 # Spider logs will be kept in file with name set to timestamp in following
 # format
 SPIDER_LOG_FILE_TIMEFORMAT = '%Y-%m-%dT%H%M%S.%f'
 
 # Path to spiders log directory
-LOG_DIR = '/var/log/scrapyrt'
+LOG_DIR = os.getenv("SCRAPYRT_SERVER_LOG_DIR")
 
 LOG_ENCODING = 'utf-8'
 
