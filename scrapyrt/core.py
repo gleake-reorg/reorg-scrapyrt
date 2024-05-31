@@ -153,7 +153,8 @@ class CrawlManager(object):
     def get_project_settings(self):
         # set logfile for a job
         # log_file = self._get_log_file_path()
-        log_file = '/var/log/scrapyrt/app.log'
+        # log_file = '/var/log/scrapyrt/app.log'
+        log_file = os.getenv("SCRAPYRT_SPIDER_LOG_FILE")
         custom_settings = get_scrapyrt_settings(log_file=log_file)
         return get_project_settings(custom_settings=custom_settings)
 
