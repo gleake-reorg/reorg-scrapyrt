@@ -19,7 +19,7 @@ from .decorators import deprecated
 from .log import setup_spider_logging
 
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv("/scrapyrt/src/.env")
 
 
 class ScrapyrtCrawler(Crawler):
