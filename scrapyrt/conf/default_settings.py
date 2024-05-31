@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv("/scrapyrt/src/")
 
 for k, v in os.environ.items():
     print(f'{k}: {v}')
