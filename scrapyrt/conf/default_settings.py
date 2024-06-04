@@ -9,6 +9,8 @@ load_dotenv("/scrapyrt/src/.env")
 # Project settings module - found at server initialization
 PROJECT_SETTINGS = None
 
+LOG_STDOUT = True
+
 # Path to server log file
 LOG_FILE = os.environ.get("SCRAPYRT_SERVER_LOG_FILE")
 
