@@ -9,7 +9,7 @@ def get_scrapyrt_settings(log_file=None):
         "LOG_LEVEL": "DEBUG",
         "LOG_ENABLED": bool(log_file),
         "LOG_FILE": log_file,
-        "LOG_STDOUT": True,
+        "LOG_STDOUT": False,
         "EXTENSIONS": {
             'scrapy.extensions.logstats.LogStats': None,
             'scrapy.webservice.WebService': None,
