@@ -133,9 +133,8 @@ def setup_spider_logging(spider, settings):
         settings = Settings(settings)
 
     # Looging stdout is a bad idea when mutiple crawls are running
-    # the below 2 lines were commented out by scrapyRT source code, but Gareth Leake uncommented them to test writing to stdout, since we had issues with DataDog trying to read log files.
-    if settings.getbool('LOG_STDOUT'):
-        sys.stdout = StreamLogger(logging.getLogger('stdout'))
+    # if settings.getbool('LOG_STDOUT'):
+    #     sys.stdout = StreamLogger(logging.getLogger('stdout'))
     filename = settings.get('LOG_FILE')
     if filename:
         encoding = settings.get('LOG_ENCODING')
